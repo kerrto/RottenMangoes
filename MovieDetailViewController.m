@@ -32,32 +32,26 @@
             if (!jsonParsingError) {
                 NSLog(@"%@", jsonData);
     
-                NSArray *reviewArray = jsonData [@"reviews"];
-                
-                
-                NSDictionary *firstReviewDict = reviewArray[0];
-                self.movie.review1 = firstReviewDict[@"quote"];
-                
-                NSDictionary *secondReviewDict=reviewArray[1];
-                self.movie.review2=secondReviewDict[@"quote"];
-                
-                NSDictionary *thirdReviewDict=reviewArray[2];
-                self.movie.review3=thirdReviewDict[@"quote"];
-                
-                self.review1Label.text=self.movie.review1;
-                self.review2Label.text=self.movie.review2;
-                self.review3Label.text=self.movie.review3;
-        
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSArray *reviewArray = jsonData [@"reviews"];
+                        
+                        
+                        NSDictionary *firstReviewDict = reviewArray[0];
+                        self.movie.review1 = firstReviewDict[@"quote"];
+                        
+                        NSDictionary *secondReviewDict=reviewArray[1];
+                        self.movie.review2=secondReviewDict[@"quote"];
+                        
+                        NSDictionary *thirdReviewDict=reviewArray[2];
+                        self.movie.review3=thirdReviewDict[@"quote"];
+                        
+                        self.review1Label.text=self.movie.review1;
+                        self.review2Label.text=self.movie.review2;
+                        self.review3Label.text=self.movie.review3;
+                    });
+    
                 }
-                
-//                
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    NSLog(@"Inside dispatch async");
-//                    [self.view reloadData];
-//                });
-//                NSLog(@"After dispatch async");
-//            }
-        }
+           }
     }];
     
     
