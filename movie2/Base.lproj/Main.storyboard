@@ -17,26 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-cH-Jae">
-                                <rect key="frame" x="35" y="99" width="251" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-cH-Jae">
+                                <rect key="frame" x="9" y="72" width="298" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="MfQ-CL-w1m"/>
+                                    <constraint firstAttribute="width" constant="298" id="vqZ-yU-peb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW0-1n-lGj">
-                                <rect key="frame" x="35" y="212" width="251" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW0-1n-lGj">
+                                <rect key="frame" x="8" y="106" width="302" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="pYO-CW-DYT"/>
+                                    <constraint firstAttribute="width" constant="302" id="uRL-Lf-805"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M1-4V-rRI">
-                                <rect key="frame" x="35" y="343" width="251" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M1-4V-rRI">
+                                <rect key="frame" x="9" y="140" width="302" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="BPX-hU-6Zo"/>
+                                    <constraint firstAttribute="width" constant="302" id="TwW-xa-csZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HW0-1n-lGj" firstAttribute="top" secondItem="bbO-vW-UJz" secondAttribute="bottom" constant="42" id="9BP-Zf-u4Y"/>
+                            <constraint firstItem="0M1-4V-rRI" firstAttribute="leading" secondItem="DG8-2N-DBZ" secondAttribute="leading" constant="9" id="Am4-pd-j0W"/>
+                            <constraint firstItem="0M1-4V-rRI" firstAttribute="top" secondItem="hw5-cH-Jae" secondAttribute="bottom" constant="8" id="TXV-em-xNy"/>
+                            <constraint firstAttribute="trailing" secondItem="hw5-cH-Jae" secondAttribute="trailing" constant="9" id="VSk-zp-ulR"/>
+                            <constraint firstItem="hw5-cH-Jae" firstAttribute="leading" secondItem="DG8-2N-DBZ" secondAttribute="leading" constant="9" id="Vxm-8G-ipo"/>
+                            <constraint firstItem="0M1-4V-rRI" firstAttribute="top" secondItem="bbO-vW-UJz" secondAttribute="bottom" constant="76" id="aOR-5W-DKe"/>
+                            <constraint firstItem="HW0-1n-lGj" firstAttribute="leading" secondItem="DG8-2N-DBZ" secondAttribute="leading" constant="8" id="ryu-c4-qYf"/>
+                            <constraint firstItem="hw5-cH-Jae" firstAttribute="top" secondItem="bbO-vW-UJz" secondAttribute="bottom" constant="8" id="vdA-SO-OJo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VSk-zp-ulR"/>
+                                <exclude reference="TXV-em-xNy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="A4c-80-1ba"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
