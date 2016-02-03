@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewCell.h
+//  MapViewController.h
 //  movie2
 //
 //  Created by Kerry Toonen on 2016-02-02.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
-@interface MovieCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *movieCell;
+@interface MapViewController : UIViewController
+
+@property (strong, nonatomic) Movie *movie;
 
 
 

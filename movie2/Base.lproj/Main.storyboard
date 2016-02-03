@@ -5,6 +5,39 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="iSD-Ib-yQp">
+            <objects>
+                <viewController id="t0M-hE-7st" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zn1-hF-D8T"/>
+                        <viewControllerLayoutGuide type="bottom" id="6a9-gF-eqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Mw-SZ-Tf5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kIR-v3-uTd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kIR-v3-uTd" firstAttribute="top" secondItem="Zn1-hF-D8T" secondAttribute="bottom" id="GoB-yx-xkz"/>
+                            <constraint firstItem="6a9-gF-eqx" firstAttribute="top" secondItem="kIR-v3-uTd" secondAttribute="bottom" id="L5b-oK-xgq"/>
+                            <constraint firstItem="kIR-v3-uTd" firstAttribute="leading" secondItem="9Mw-SZ-Tf5" secondAttribute="leading" id="ng2-7o-s4I"/>
+                            <constraint firstAttribute="trailing" secondItem="kIR-v3-uTd" secondAttribute="trailing" id="pKB-0h-osG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="kIR-v3-uTd" id="Lb3-Gk-j7V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqy-fJ-9ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-960"/>
+        </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="fS8-Aq-nqy">
             <objects>
@@ -47,6 +80,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsm-BH-XRG">
+                                <rect key="frame" x="8" y="184" width="233" height="45"/>
+                                <state key="normal" title="Show Theatre Map"/>
+                                <connections>
+                                    <action selector="mapButton:" destination="qL1-kP-PaG" eventType="touchUpInside" id="eJF-Nh-UiC"/>
+                                    <segue destination="t0M-hE-7st" kind="show" identifier="goToMap" id="QdR-DB-Zxl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

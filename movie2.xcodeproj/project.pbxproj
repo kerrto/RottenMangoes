@@ -18,6 +18,8 @@
 		AB89A0571C610AA900B9F46A /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A0561C610AA900B9F46A /* Movie.m */; };
 		AB89A05A1C6116C300B9F46A /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A0591C6116C300B9F46A /* MovieCollectionViewCell.m */; };
 		AB89A0601C61217500B9F46A /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A05F1C61217500B9F46A /* MovieDetailViewController.m */; };
+		AB89A0631C6148C600B9F46A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A0621C6148C600B9F46A /* MapViewController.m */; };
+		AB89A0671C61728B00B9F46A /* stacks-image-530F043.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89A0661C61728B00B9F46A /* stacks-image-530F043.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		AB89A0591C6116C300B9F46A /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		AB89A05E1C61217500B9F46A /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailViewController.h; path = ../MovieDetailViewController.h; sourceTree = "<group>"; };
 		AB89A05F1C61217500B9F46A /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailViewController.m; path = ../MovieDetailViewController.m; sourceTree = "<group>"; };
+		AB89A0611C6148C600B9F46A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AB89A0621C6148C600B9F46A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AB89A0661C61728B00B9F46A /* stacks-image-530F043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stacks-image-530F043.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,7 @@
 		AB89A0101C60ECCE00B9F46A = {
 			isa = PBXGroup;
 			children = (
+				AB89A0661C61728B00B9F46A /* stacks-image-530F043.png */,
 				AB89A01B1C60ECCE00B9F46A /* movie2 */,
 				AB89A0351C60ECCE00B9F46A /* movie2Tests */,
 				AB89A0401C60ECCF00B9F46A /* movie2UITests */,
@@ -117,6 +123,8 @@
 				AB89A01F1C60ECCE00B9F46A /* AppDelegate.h */,
 				AB89A0201C60ECCE00B9F46A /* AppDelegate.m */,
 				AB89A0251C60ECCE00B9F46A /* Main.storyboard */,
+				AB89A0611C6148C600B9F46A /* MapViewController.h */,
+				AB89A0621C6148C600B9F46A /* MapViewController.m */,
 				AB89A05E1C61217500B9F46A /* MovieDetailViewController.h */,
 				AB89A05F1C61217500B9F46A /* MovieDetailViewController.m */,
 				AB89A0551C610AA900B9F46A /* Movie.h */,
@@ -263,6 +271,7 @@
 			files = (
 				AB89A02C1C60ECCE00B9F46A /* LaunchScreen.storyboard in Resources */,
 				AB89A0291C60ECCE00B9F46A /* Assets.xcassets in Resources */,
+				AB89A0671C61728B00B9F46A /* stacks-image-530F043.png in Resources */,
 				AB89A0271C60ECCE00B9F46A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +303,7 @@
 				AB89A0571C610AA900B9F46A /* Movie.m in Sources */,
 				AB89A0211C60ECCE00B9F46A /* AppDelegate.m in Sources */,
 				AB89A01E1C60ECCE00B9F46A /* main.m in Sources */,
+				AB89A0631C6148C600B9F46A /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
