@@ -14,6 +14,7 @@
 #import <CoreLocation/CLPlacemark.h>
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (assign, nonatomic) BOOL initialLocationSet;
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -22,10 +23,9 @@
 
 @implementation MapViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    //self.mapView=[[MKMapView alloc]init];
     
     self.mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
@@ -54,7 +54,6 @@
              CLPlacemark* placemark = [placemarks firstObject];
              if (placemark)
              {
-                 //Using blocks, get zip code
                  NSString *postalCode = placemark.postalCode;
                  
                  NSURLSession *session = [NSURLSession sharedSession];
@@ -99,8 +98,8 @@
                                        [self.mapView addAnnotation:marker];
                                        location = marker.coordinate;
                                    }
-                                   
-                                   [self.mapView setRegion:MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.1, 0.1)) animated:YES];
+//                                   
+//                                   [self.mapView setRegion:MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.1, 0.1)) animated:YES];
                                    
                                });
                            }
@@ -122,7 +121,6 @@
 {
     NSLog(@"Authorization changed");
     
-    // If the user's allowed us to use their location, we can start getting location updates
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse)
     {
         [self.locationManager startUpdatingLocation];
@@ -132,53 +130,45 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
     
-    // Get the last object from the list of locations we get back
     CLLocation *userLocation = [locations lastObject];
     
-    // Only do the zoom in once
-    if (!self.initialLocationSet) {
+    if (!self.initialLocationSet)
+    {
         self.initialLocationSet = YES;
         
-        // Create a region around the user's location
         CLLocationCoordinate2D userCoordinate = userLocation.coordinate;
-        MKCoordinateRegion userRegion = MKCoordinateRegionMake(userCoordinate, MKCoordinateSpanMake(0.01, 0.01));
+        MKCoordinateRegion userRegion = MKCoordinateRegionMake(userCoordinate, MKCoordinateSpanMake(0.05, 0.05));
+        
+    
         
         [self getJSONMapData:userLocation];
         
         [self.mapView setRegion:userRegion animated:YES];
         
-        
-        //        CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
-        //        [geoCoder geocodeAddressString:@"46 Spadina, Toronto" completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        //            if (!error) {
-        //                // The Placemark will have information about the location, like the coordinates, postal code, etc.
-        //                CLPlacemark *placemark = [placemarks lastObject];
-        //                NSLog(@"%@", placemark);
-        //            }
-        //        }];
     }
 }
 
 #pragma mark MKMapViewDelegate
 
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    
-    // Don't customize user's location annotation
-    if (annotation == mapView.userLocation) {
-        return nil;
-    }
-    
-    // Create our own annotations and customize the image
-    MKAnnotationView *pinView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"Theatre"];
-    if (!pinView) {
-        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Theatre"];
-        pinView.image = [UIImage imageNamed:@"stacks-image-530F043.png"];
-        pinView.centerOffset = CGPointMake(0, -pinView.image.size.height/2);
-    }
-    
-    return pinView;
-}
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    
+//    if (annotation == mapView.userLocation)
+//    {
+//        return nil;
+//    }
+//    
+//    MKAnnotationView *pinView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"Theatre"];
+//    if (!pinView)
+//    {
+//        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Theatre"];
+//        pinView.image = [UIImage imageNamed:@"stacks-image-530F043.png"];
+//        pinView.centerOffset = CGPointMake(0, -pinView.image.size.height/2);
+//    }
+//    
+//    return pinView;
+//}
 
 /*
  #pragma mark - Navigation

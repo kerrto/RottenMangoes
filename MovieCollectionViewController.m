@@ -28,9 +28,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=xe4xau69pxaah5tmuryvrw75";
     NSURL *url = [NSURL URLWithString:urlString];
-    
-    // NEVER DO THIS
-    // NSData *data = [NSData dataWithContentsOfURL:url];
+
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

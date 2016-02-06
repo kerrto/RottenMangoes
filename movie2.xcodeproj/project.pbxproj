@@ -20,6 +20,7 @@
 		AB89A0601C61217500B9F46A /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A05F1C61217500B9F46A /* MovieDetailViewController.m */; };
 		AB89A0631C6148C600B9F46A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A0621C6148C600B9F46A /* MapViewController.m */; };
 		AB89A0671C61728B00B9F46A /* stacks-image-530F043.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89A0661C61728B00B9F46A /* stacks-image-530F043.png */; };
+		AB89A06A1C618DE000B9F46A /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = AB89A0691C618DE000B9F46A /* Theatre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		AB89A0611C6148C600B9F46A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		AB89A0621C6148C600B9F46A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		AB89A0661C61728B00B9F46A /* stacks-image-530F043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stacks-image-530F043.png"; sourceTree = "<group>"; };
+		AB89A0681C618DE000B9F46A /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		AB89A0691C618DE000B9F46A /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				AB89A0251C60ECCE00B9F46A /* Main.storyboard */,
 				AB89A0611C6148C600B9F46A /* MapViewController.h */,
 				AB89A0621C6148C600B9F46A /* MapViewController.m */,
+				AB89A0681C618DE000B9F46A /* Theatre.h */,
+				AB89A0691C618DE000B9F46A /* Theatre.m */,
 				AB89A05E1C61217500B9F46A /* MovieDetailViewController.h */,
 				AB89A05F1C61217500B9F46A /* MovieDetailViewController.m */,
 				AB89A0551C610AA900B9F46A /* Movie.h */,
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB89A0601C61217500B9F46A /* MovieDetailViewController.m in Sources */,
+				AB89A06A1C618DE000B9F46A /* Theatre.m in Sources */,
 				AB89A0541C6109EF00B9F46A /* MovieCollectionViewController.m in Sources */,
 				AB89A05A1C6116C300B9F46A /* MovieCollectionViewCell.m in Sources */,
 				AB89A0571C610AA900B9F46A /* Movie.m in Sources */,

@@ -21,7 +21,7 @@
     [super viewDidLoad];
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSString *reviewURL = [self.movie.reviewURL stringByAppendingString:@"?apikey=j9fhnct2tp8wu2q9h75kanh9&page_limit=3"];
+    NSString *reviewURL = [self.movie.reviewURL stringByAppendingString:@"?apikey=xe4xau69pxaah5tmuryvrw75"];
     NSURL *url = [NSURL URLWithString:reviewURL];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
