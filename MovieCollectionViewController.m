@@ -141,7 +141,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Configure the cell
     
-    return cell;
+
 }
 
 #pragma mark <UICollectionViewDelegate>
