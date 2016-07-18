@@ -26,7 +26,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=xe4xau69pxaah5tmuryvrw75";
+    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?APIKEYHERE";
     NSURL *url = [NSURL URLWithString:urlString];
 
     
@@ -48,7 +48,7 @@ static NSString * const reuseIdentifier = @"Cell";
                     movie.title = movieDictionary[@"title"];
                     movie.reviewURL=[[movieDictionary objectForKey:@"links"]objectForKey:@"reviews"];
                     
-                    NSString *thumbnail=[[movieDictionary objectForKey:@"posters"]objectForKey:@"thumbnail"];
+                    NSString *thumbnail=[[movieDictionary objectForKey:@"posters"]objectForKey:@"detailed"];
                     
                     NSURL *thumbnailURL=[NSURL URLWithString:thumbnail];
                     
