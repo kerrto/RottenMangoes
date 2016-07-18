@@ -26,7 +26,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?APIKEYHERE";
+    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=xe4xau69pxaah5tmuryvrw75";
     NSURL *url = [NSURL URLWithString:urlString];
 
     
